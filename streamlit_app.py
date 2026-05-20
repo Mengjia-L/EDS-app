@@ -1290,7 +1290,7 @@ def main():
                 except Exception as e:
                     st.warning(f"常模对比图绘制失败：{e}")
 
-            st.markdown("### 4）智能建议（可编辑）")
+            st.markdown("### 4）智能建议")
             recommendation_text = generate_recommendations(
                 predicted_class=predicted_class,
                 confidence=confidence,
@@ -1300,7 +1300,7 @@ def main():
             st.session_state["editable_recommendation"] = recommendation_text
 
             st.text_area(
-                "系统生成的个性化建议（您可以直接修改）：",
+                "系统生成的个性化建议：",
                 key="editable_recommendation",
                 height=260,
             )
