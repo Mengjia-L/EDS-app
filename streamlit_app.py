@@ -23,8 +23,6 @@ import seaborn as sns
 import shap
 from catboost import CatBoostClassifier
 from sklearn.preprocessing import StandardScaler
-plt.rcParams['font.sans-serif'] = ['SimHei']  #显示中文
-plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
 
 
 FINAL_CLASS_ORDER = ["NC", "MCI", "AD", "nAD"]
@@ -1080,8 +1078,16 @@ def main():
     )
 
     sns.set_theme(style="whitegrid")
+    plt.rcParams["font.sans-serif"] = [
+    "Noto Sans CJK SC",
+    "Noto Sans CJK JP",
+    "Noto Sans CJK TC",
+    "SimHei",
+    "Microsoft YaHei",
+    "Arial Unicode MS",
+    "DejaVu Sans"
+]
     plt.rcParams["axes.unicode_minus"] = False
-    plt.rcParams["font.sans-serif"] = ["Microsoft YaHei", "SimHei", "Arial Unicode MS", "DejaVu Sans"]
 
     if "editable_recommendation" not in st.session_state:
         st.session_state["editable_recommendation"] = ""
