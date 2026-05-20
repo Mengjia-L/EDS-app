@@ -1078,12 +1078,13 @@ def main():
     )
 
     sns.set_theme(style="whitegrid")
+    plt.rcParams["font.family"] = "sans-serif"
     plt.rcParams["font.sans-serif"] = [
     "Noto Sans CJK SC",
     "Noto Sans CJK JP",
     "Noto Sans CJK TC",
-    "SimHei",
     "Microsoft YaHei",
+    "SimHei",
     "Arial Unicode MS",
     "DejaVu Sans"
 ]
